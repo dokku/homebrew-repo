@@ -10,17 +10,17 @@ class Dokku < Formula
 
   def caveats
     <<~EOS
-Run `dokku` from a repository with a git remote named `dokku` pointed
-at your Dokku host in order to use the script as normal, e.g.:
+      Run `dokku` from a repository with a git remote named `dokku` pointed
+      at your Dokku host in order to use the script as normal, e.g.:
 
-  git remote add dokku dokku@<dokku-host>:<app-name>
+        git remote add dokku dokku@<dokku-host>:<app-name>
 
-or configure the `DOKKU_HOST`, `DOKKU_PORT` and `DOKKU_GIT_REMOTE`
-environment variables, e.g.:
+      or configure the `DOKKU_HOST`, `DOKKU_PORT` and `DOKKU_GIT_REMOTE`
+      environment variables, e.g.:
 
-  export DOKKU_HOST=dokku.me
-  export DOKKU_PORT=22
-  export DOKKU_GIT_REMOTE=dokku
+        export DOKKU_HOST=dokku.me
+        export DOKKU_PORT=22
+        export DOKKU_GIT_REMOTE=dokku
     EOS
   end
 
