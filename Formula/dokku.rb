@@ -8,7 +8,8 @@ class Dokku < Formula
     bin.install "contrib/dokku_client.sh" => "dokku"
   end
 
-  def caveats; <<~EOS
+  def caveats
+    <<~EOS
     Run `dokku` from a repository with a git remote named `dokku` pointed
     at your Dokku host in order to use the script as normal, e.g.:
       git remote add dokku dokku@<dokku-host>:<app-name>
