@@ -10,4 +10,4 @@ brew install dokku/repo/dokku
 
 ## Formulae
 
-- [dokku](/Formula/dokku.db)
+- [dokku](/Formula/dokku.db): Installs the official remote client for the Dokku project.
