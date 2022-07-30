@@ -1,8 +1,8 @@
 class Dokku < Formula
   desc "Command-line client for the Dokku PaaS"
   homepage "https://dokku.com"
-  url "https://github.com/dokku/dokku/archive/v0.27.8.tar.gz"
-  sha256 "dc132c6dbfde8963d8e535372f2e12d0889fd29c1a3294f1be203083dda029f8"
+  url "https://github.com/dokku/dokku/archive/v0.27.9.tar.gz"
+  sha256 "c803e5247617efd7c630758de9e7ea7139bd4b2b3527f012b21f18111116f518"
 
   def install
     bin.install "contrib/dokku_client.sh" => "dokku"
