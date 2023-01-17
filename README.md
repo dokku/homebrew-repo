@@ -10,5 +10,20 @@ brew install dokku/repo/dokku
 
 ## Formulae
 
+Auto-updated:
+
 - [dokku](/Formula/dokku.db): Installs the official remote client for the Dokku project.
+
+Manually updated:
+
 - [docker-container-healthchecker](/Formula/docker-container-healthchecker.db)
+
+## Todo
+
+- netrc
+- lambda-builder
+- docker-run-export
+- procfile-util
+- omakase
+- prop
+- docker-image-labeler
