@@ -1,0 +1,34 @@
+name: test-formulas
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        formula:
+          - docker-container-healthchecker
+          - dokku
+    steps:
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Tap repo
+        run: |
+          mkdir -p $(dirname $(brew --repo dokku/repo))
+          ln -s $PWD $(brew --repo dokku/repo)
+
+      - name: Install formula
+        run: brew install dokku/repo/${{ matrix.formula }}
+
+      - name: Test formula
+        run: brew test dokku/repo/${{ matrix.formula }}

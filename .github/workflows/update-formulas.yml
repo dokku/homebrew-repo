@@ -1,0 +1,36 @@
+name: update-formulas
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        formula:
+          - dokku
+    steps:
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Tap repo
+        run: |
+          mkdir -p $(dirname $(brew --repo dokku/repo))
+          ln -s $PWD $(brew --repo dokku/repo)
+
+      - name: Update formula
+        id: update
+        run: |
+          brew livecheck dokku/repo/${{ matrix.formula }} --json | jq -r '.[0].version.latest' > /tmp/version
+          VERSION=$(cat /tmp/version)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          brew bump-formula-pr dokku/repo/${{ matrix.formula }} --no-browse --no-fork --version=$VERSION --base master
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}

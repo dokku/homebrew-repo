@@ -1,29 +1,22 @@
 # Dokku Homebrew Tap
 
-This repository contains formula to install the command-line client for the Dokku PaaS through the [Homebrew](https://brew.sh) package manager.
+This repository contains formulas to install Dokku-related tools through the [Homebrew](https://brew.sh) package manager.
 
-## Installation
+See [docs/README.md](docs/README.md) for detailed installation and usage instructions.
+
+## Quick Start
 
 ```bash
+brew tap dokku/repo
 brew install dokku/repo/dokku
 ```
 
-## Formulae
+## Formulas
 
 Auto-updated:
 
-- [dokku](/Formula/dokku.db): Installs the official remote client for the Dokku project.
+- [dokku](/Formula/dokku.rb): The official remote client for the Dokku PaaS.
 
 Manually updated:
 
-- [docker-container-healthchecker](/Formula/docker-container-healthchecker.db)
-
-## Todo
-
-- netrc
-- lambda-builder
-- docker-run-export
-- procfile-util
-- omakase
-- prop
-- docker-image-labeler
+- [docker-container-healthchecker](/Formula/docker-container-healthchecker.rb): A health checker for Docker containers.
