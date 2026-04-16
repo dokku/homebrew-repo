@@ -18,9 +18,11 @@ class DockerContainerHealthchecker < Formula
     arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
     bin.install "docker-container-healthchecker-darwin-#{arch}" => "docker-container-healthchecker"
+    (prefix/"lib/docker/cli-plugins").install_symlink bin/"docker-container-healthchecker"
   end
 
   test do
     system "#{bin}/docker-container-healthchecker", "version"
+    assert_predicate prefix/"lib/docker/cli-plugins/docker-container-healthchecker", :exist?
   end
 end
