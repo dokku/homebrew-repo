@@ -17,6 +17,6 @@ class DockerContainerHealthchecker < Formula
   end
 
   test do
-    system "#{bin}/docker-container-healthchecker" "version"
+    system "#{bin}/docker-container-healthchecker", "version"
   end
 end
