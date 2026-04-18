@@ -18,9 +18,11 @@ class DockerOrchestrate < Formula
     arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
     bin.install "docker-orchestrate-darwin-#{arch}" => "docker-orchestrate"
+    (prefix/"lib/docker/cli-plugins").install_symlink bin/"docker-orchestrate"
   end
 
   test do
     system "#{bin}/docker-orchestrate", "version"
+    assert_predicate prefix/"lib/docker/cli-plugins/docker-orchestrate", :exist?
   end
 end
