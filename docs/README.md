@@ -20,10 +20,34 @@ brew install dokku/repo/dokku
 
 ### docker-container-healthchecker
 
-A health checker for Docker containers.
+Runs healthchecks against local docker containers.
 
 ```bash
 brew install dokku/repo/docker-container-healthchecker
+```
+
+### docker-orchestrate
+
+Docker plugin for orchestrating compose deploys.
+
+```bash
+brew install dokku/repo/docker-orchestrate
+```
+
+### docker-port-forward
+
+Forward local ports to running Docker containers or Compose services.
+
+```bash
+brew install dokku/repo/docker-port-forward
+```
+
+### docker-run-export
+
+Export docker run flags to various formats.
+
+```bash
+brew install dokku/repo/docker-run-export
 ```
 
 ## Updating

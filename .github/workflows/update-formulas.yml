@@ -12,6 +12,10 @@ jobs:
       fail-fast: false
       matrix:
         formula:
+          - docker-container-healthchecker
+          - docker-orchestrate
+          - docker-port-forward
+          - docker-run-export
           - dokku
     steps:
       - name: Set up Homebrew
