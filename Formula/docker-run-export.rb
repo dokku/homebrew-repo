@@ -19,9 +19,11 @@ class DockerRunExport < Formula
     arch = Hardware::CPU.arm? ? "arm64" : "amd64"
 
     bin.install "docker-run-export-darwin-#{arch}" => "docker-run-export"
+    (prefix/"lib/docker/cli-plugins").install_symlink bin/"docker-run-export" => "docker-dre"
   end
 
   test do
     system "#{bin}/docker-run-export", "version"
+    assert_predicate prefix/"lib/docker/cli-plugins/docker-dre", :exist?
   end
 end
