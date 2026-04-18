@@ -18,9 +18,11 @@ class DockerPortForward < Formula
     arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
     bin.install "docker-port-forward-darwin-#{arch}" => "docker-port-forward"
+    (prefix/"lib/docker/cli-plugins").install_symlink bin/"docker-port-forward" => "docker-pf"
   end
 
   test do
     system "#{bin}/docker-port-forward", "--help"
+    assert_predicate prefix/"lib/docker/cli-plugins/docker-pf", :exist?
   end
 end
