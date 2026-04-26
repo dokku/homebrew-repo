@@ -14,6 +14,7 @@ jobs:
       matrix:
         formula:
           - docker-container-healthchecker
+          - docket
           - dokku
     steps:
       - name: Set up Homebrew

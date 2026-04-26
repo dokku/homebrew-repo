@@ -50,6 +50,14 @@ Export docker run flags to various formats.
 brew install dokku/repo/docker-run-export
 ```
 
+### docket
+
+Pre-package and ship applications on Dokku.
+
+```bash
+brew install dokku/repo/docket
+```
+
 ## Updating
 
 To update to the latest version:
