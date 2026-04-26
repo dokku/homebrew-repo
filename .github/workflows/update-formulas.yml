@@ -16,6 +16,7 @@ jobs:
           - docker-orchestrate
           - docker-port-forward
           - docker-run-export
+          - docket
           - dokku
     steps:
       - name: Set up Homebrew

@@ -20,3 +20,4 @@ Auto-updated:
 - [docker-orchestrate](/Formula/docker-orchestrate.rb): Docker plugin for orchestrating compose deploys.
 - [docker-port-forward](/Formula/docker-port-forward.rb): Forward local ports to running Docker containers or Compose services.
 - [docker-run-export](/Formula/docker-run-export.rb): Export docker run flags to various formats.
+- [docket](/Formula/docket.rb): Pre-package and ship applications on Dokku.

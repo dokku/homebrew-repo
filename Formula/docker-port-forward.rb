@@ -22,7 +22,7 @@ class DockerPortForward < Formula
   end
 
   test do
-    system "#{bin}/docker-port-forward", "--help"
-    assert_predicate prefix/"lib/docker/cli-plugins/docker-pf", :exist?
+    system bin/"docker-port-forward", "--help"
+    assert_path_exists prefix/"lib/docker/cli-plugins/docker-pf"
   end
 end

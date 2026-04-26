@@ -22,7 +22,7 @@ class DockerOrchestrate < Formula
   end
 
   test do
-    system "#{bin}/docker-orchestrate", "version"
-    assert_predicate prefix/"lib/docker/cli-plugins/docker-orchestrate", :exist?
+    system bin/"docker-orchestrate", "version"
+    assert_path_exists prefix/"lib/docker/cli-plugins/docker-orchestrate"
   end
 end
