@@ -16,6 +16,7 @@ jobs:
           - docker-container-healthchecker
           - docket
           - dokku
+          - lambda-builder
     steps:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@master

@@ -18,6 +18,7 @@ jobs:
           - docker-run-export
           - docket
           - dokku
+          - lambda-builder
     steps:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@master

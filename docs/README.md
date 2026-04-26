@@ -58,6 +58,14 @@ Pre-package and ship applications on Dokku.
 brew install dokku/repo/docket
 ```
 
+### lambda-builder
+
+A tool for building lambda function images or zips via Docker.
+
+```bash
+brew install dokku/repo/lambda-builder
+```
+
 ## Updating
 
 To update to the latest version:
