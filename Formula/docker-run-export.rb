@@ -2,7 +2,7 @@ class DockerRunExport < Formula
   desc "Export docker run flags to various formats"
   homepage "https://github.com/dokku/docker-run-export"
 
-  version "v0.5.0"
+  version "0.5.0"
 
   if Hardware::CPU.intel?
     url "https://github.com/dokku/docker-run-export/releases/download/v#{version}/docker-run-export-darwin-amd64"
