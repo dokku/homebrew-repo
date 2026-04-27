@@ -2,7 +2,7 @@ class DockerContainerHealthchecker < Formula
   desc "Runs healthchecks against local docker containers"
   homepage "https://github.com/dokku/docker-container-healthchecker"
 
-  version "v0.15.2"
+  version "0.15.2"
 
   if Hardware::CPU.intel?
     url "https://github.com/dokku/docker-container-healthchecker/releases/download/v#{version}/docker-container-healthchecker-darwin-amd64"
