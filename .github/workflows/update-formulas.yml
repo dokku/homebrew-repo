@@ -19,6 +19,7 @@ jobs:
           - docket
           - dokku
           - lambda-builder
+          - netrc
     steps:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@master
