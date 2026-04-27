@@ -37,6 +37,7 @@ jobs:
         run: |
           brew livecheck dokku/repo/${{ matrix.formula }} --json | jq -r '.[0].version.latest' > /tmp/version
           VERSION=$(cat /tmp/version)
+          VERSION=${VERSION#v}
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           brew bump-formula-pr dokku/repo/${{ matrix.formula }} --no-browse --no-fork --version=$VERSION --base master
         env:
