@@ -2,14 +2,14 @@ class DockerContainerHealthchecker < Formula
   desc "Runs healthchecks against local docker containers"
   homepage "https://github.com/dokku/docker-container-healthchecker"
 
-  version "0.15.1"
+  version "v0.15.2"
 
   if Hardware::CPU.intel?
     url "https://github.com/dokku/docker-container-healthchecker/releases/download/v#{version}/docker-container-healthchecker-darwin-amd64"
-    sha256 "de6fd3d51d2d13a50675d046e18b30d045b090c75d8bb2920be26bc4780167a5"
+    sha256 "06bfcf0c3bbdbeec378bc7c367b30664cc43f3bc2b795d71b2f074fe15abc7d1"
   else
     url "https://github.com/dokku/docker-container-healthchecker/releases/download/v#{version}/docker-container-healthchecker-darwin-arm64"
-    sha256 "cd183abb7e55566fde74a18dc592bb42bd7b09173b38cdffc35b61f53f049e84"
+    sha256 "48094c767fd84bb4c1bc6ae9e4727de4bb1011b589fec87babc9188ff51670fc"
   end
 
   license "BSD-3-Clause"
