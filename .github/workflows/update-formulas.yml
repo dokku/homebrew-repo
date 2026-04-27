@@ -42,3 +42,23 @@ jobs:
           brew bump-formula-pr dokku/repo/${{ matrix.formula }} --no-browse --no-fork --version=$VERSION --base master
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sanitize version stanza on bot branch
+        if: success()
+        run: |
+          BRANCH=$(git rev-parse --abbrev-ref HEAD)
+          if [ "$BRANCH" = "master" ] || [ "$BRANCH" = "HEAD" ]; then
+            echo "Not on a bot branch (current: $BRANCH); nothing to sanitize."
+            exit 0
+          fi
+
+          FILE="Formula/${{ matrix.formula }}.rb"
+          if ! grep -qE '^  version "v' "$FILE"; then
+            echo "No stray v prefix in $FILE; nothing to sanitize."
+            exit 0
+          fi
+
+          sed -i '' -E 's/^(  version ")v/\1/' "$FILE"
+          git add "$FILE"
+          git commit --amend --no-edit
+          git push --force-with-lease origin "$BRANCH"
