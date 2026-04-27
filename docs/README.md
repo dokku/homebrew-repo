@@ -66,6 +66,14 @@ A tool for building lambda function images or zips via Docker.
 brew install dokku/repo/lambda-builder
 ```
 
+### netrc
+
+Utility that allows users to manage netrc files.
+
+```bash
+brew install dokku/repo/netrc
+```
+
 ## Updating
 
 To update to the latest version:

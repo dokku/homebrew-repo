@@ -22,3 +22,4 @@ Auto-updated:
 - [docker-run-export](/Formula/docker-run-export.rb): Export docker run flags to various formats.
 - [docket](/Formula/docket.rb): Pre-package and ship applications on Dokku.
 - [lambda-builder](/Formula/lambda-builder.rb): A tool for building lambda function images or zips via Docker.
+- [netrc](/Formula/netrc.rb): Utility that allows users to manage netrc files.
