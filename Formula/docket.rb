@@ -2,14 +2,14 @@ class Docket < Formula
   desc "Pre-package and ship applications on Dokku"
   homepage "https://github.com/dokku/docket"
 
-  version "0.1.0"
+  version "0.2.0"
 
   if Hardware::CPU.intel?
     url "https://github.com/dokku/docket/releases/download/#{version}/docket-darwin-amd64"
-    sha256 "bd4cbe95f25de14e3fdbf9ac438069d64d75adb0e255ffd64d7e0dcd4bae8d94"
+    sha256 "134c42b43ea2e37e26b5c050472eddc10d9100503db74ac43f6a3211de58b9bf"
   else
     url "https://github.com/dokku/docket/releases/download/#{version}/docket-darwin-arm64"
-    sha256 "38188c2ba5ec157a212324f697d6f5e8b631b5728bd5cef7ef85db4e20a6de5e"
+    sha256 "547b3ab4cc3a79b6b20d4c998561308fbe70d442a46c9d5b744a6d4f1400b03e"
   end
 
   license "MIT"
