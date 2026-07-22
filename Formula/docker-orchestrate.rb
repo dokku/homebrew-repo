@@ -2,14 +2,14 @@ class DockerOrchestrate < Formula
   desc "Docker plugin for orchestrating compose deploys"
   homepage "https://github.com/dokku/docker-orchestrate"
 
-  version "0.2.1"
+  version "0.2.2"
 
   if Hardware::CPU.intel?
     url "https://github.com/dokku/docker-orchestrate/releases/download/#{version}/docker-orchestrate-darwin-amd64"
-    sha256 "d0cbf1dd29d7b7f95c509e1e381caa07763bec74f285437a6d9c314e86291139"
+    sha256 "26f07f34a330fc76ae782786f804c978e4f6c36ac5b30363ff7a5c652aace78e"
   else
     url "https://github.com/dokku/docker-orchestrate/releases/download/#{version}/docker-orchestrate-darwin-arm64"
-    sha256 "fcc1ab6e87b7942517504d3ee2c9ac3bcfba060515fb773f89b1ea10af9dd9ab"
+    sha256 "663bfe42ca0206b5594694766d67639c57b88c0d06a81a2c96a0c0532b858b55"
   end
 
   license "MIT"
