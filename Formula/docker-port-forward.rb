@@ -2,14 +2,14 @@ class DockerPortForward < Formula
   desc "Forward local ports to running Docker containers or Compose services"
   homepage "https://github.com/dokku/docker-port-forward"
 
-  version "0.4.0"
+  version "0.5.0"
 
   if Hardware::CPU.intel?
     url "https://github.com/dokku/docker-port-forward/releases/download/#{version}/docker-port-forward-darwin-amd64"
-    sha256 "111c123c7b4a54a9336169833c15ff9d9a88709c0a9d0aef01c5303fe6e12552"
+    sha256 "d306758935dd5a56c525ad0468d95074412865af8745aae202d605d3f715b92f"
   else
     url "https://github.com/dokku/docker-port-forward/releases/download/#{version}/docker-port-forward-darwin-arm64"
-    sha256 "56ceddf74b59fa56b87b13f0dd1d6e6e0af6a9c2a935f1a20832e19df9596fdb"
+    sha256 "76ce23e161695035acc92da688ced40d97e19a881b8c400fd2031dbd2cc17ebf"
   end
 
   license "MIT"
